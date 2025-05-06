@@ -17,7 +17,7 @@ def home(request):
         YoutubeVideo.objects.all().delete()
 
     if request.method == 'POST':
-        url = request.POST['youtube_url']
+        url = request.POST.get('youtube_url')
         if url:
             details = getDetails(url)
             desc = truncateWords(details['description'])
