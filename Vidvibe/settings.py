@@ -78,7 +78,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Vidvibe.wsgi.application'
 
-CSRF_TRUSTED_ORIGIN = [
+CSRF_TRUSTED_ORIGINS = [
     'https://vidvibe.up.railway.app'
 ]
 
