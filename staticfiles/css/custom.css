@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf") format("ttf");
+}
+
+:root {
+    --primary-blue: #34cfea;
+    --secondary-white: #fff;
+    --accent: #66d9ef;
+
+    --black: #1a1c34;
+
+    --success: #00a651;
+    --warning: #f27405;
+    --danger: #f10545;
+
+    --grad-1: #ff2cdf;
+    --grad-2: #0014ff;
+}
+
+body {
+    color: var(--secondary-white);
+    background: var(--black);
+    font-family: Poppins !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.white {
+    color: var(--secondary-white);
+}
+
+.black {
+    color: var(--black);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.danger {
+    color: var(--danger);
+}
+
+.bg-primary-blue {
+    background: var(--primary-blue);
+}
+
+.bg-secondary-white {
+    background: var(--secondary-white);
+}
+
+.danger-bg {
+    background: var(--danger);
+}
+
+.width-80 {
+    width: 80% !important;
+}
+
+.width-75 {
+    width: 75% !important;
+}
+
+.width-10 {
+    width: 10% !important;
+}
+
+.navbar-toggler {
+    float: right;
+}
+
+.navbar-nav a {
+    color: var(--secondary-white);
+    transition: .2s ease;
+}
+
+.navbar-nav a:hover {
+    color: var(--accent);
+}
+
+.heading {
+    font-size: 3rem;
+}
+
+.info .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+}
+
+.btn {
+    transition: .4s ease;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: var(--danger);
+    color: var(--black);
+}
+
+.btn.bg-primary-blue:hover {
+    color: var(--black);
+    background: var(--secondary-white);
+}
+
+.btn.bg-secondary-white:hover {
+    opacity: .8;
+    background: var(--secondary-white);
+    color: var(--black);
+}
+
+.navbar-toggler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border: none;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--secondary-white);
+}
+
+.navbar-toggler span.off {
+    background-color: var(--danger);
+    margin-left: 8px;
+}
+
+.navbar-nav a.nav-link::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: all .2s ease-in;
+}
+
+.navbar-nav a.nav-link:hover::after {
+    width: 100%;
+}
+
+.vid-thumbnail {
+    width: 50%;
+}
+
+p.about {
+    pointer-events: none;
+}

@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1>
+    
+    <link rel="icon" type="image/png" href="/media/logo.png">
+    <!--  Bootstrap styles  -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-icons.css" %}">
+    <!--  Animate styles  -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/animate.min.css" %}">
+    <!--  Custom styles  -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/loader.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/custom.css" %}">
+
+    <title>{% block title %}Videvibe - Home{% endblock title %}</title>
+</head>
+
+<!-- Min screen width is 995px wide -->
+
+<body class="vh-100 vw-100 d-flex justify-content-between flex-column align-items-center">
+    <div id="preloader">
+        <div class="firework-loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid d-flex justify-content-between py-3">
+            <div class="container-fluid align-items-center">
+                <a class="navbar-brand" href="{% url "home" %}">
+                    <img src="/media/logo.png" alt="logo" class="logo" style="width: 10%;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navlinks" aria-controls="navlinks" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="navbar-toggler">
+                        <span></span>
+                        <span class="off"></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <div class="collapse width-80 align-items-center navbar-collapse" id="navlinks">
+                <ul class="navbar-nav container mb-2 mb-lg-0 d-flex align-items-center gap-3 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url "home" %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url "about" %}">About Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid justify-content-center align-items-center py-5">
+        
+        {% block content %}{% endblock content %}
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script type="text/javascript" src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/popper.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
+    <!--  Custom js  -->
+    <script type="text/javascript" src="{% static "js/script.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/loader.js" %}"></script>
+</body>
+
+</html>

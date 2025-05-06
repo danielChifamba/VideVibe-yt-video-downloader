@@ -1,0 +1,80 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<style>
+    .black-bg {
+        background: var(--black);
+    }
+    .loading {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+        text-align: center;
+        transition: .3s ease;
+    }
+    .loading span {
+        animation: fade 1.5s infinite ease-in-out;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .loading .bar-loader {
+        width: 50%;
+        height: 10px;
+        background: linear-gradient(90deg, var(--danger), var(--secondary-white));
+        border-radius: 10px;
+        background-size: 200% 100%;
+        animation: bar-loader 1.5s infinite ease-in-out;
+    }
+    @keyframes bar-loader {
+        0%{ background-position:200% 0  }
+        100%{ background-position:-200% 0  }
+    }
+    @keyframes fade {
+        0%{ opacity: 0;  }
+        50%{ opacity: 1; }
+        100%{ opacity: 0;  }
+    }
+
+</style>
+
+<div class="container text-center h-100 w-100 m-auto">
+    <h1 class="heading white">Youtube Video Downloader</h1>
+    <div class="info d-flex justify-content-center gap-5 py-3">
+        <div class="item">
+            <i class="bi bi-check2-circle accent"></i>Unlimited Downloads
+        </div>
+        <div class="item">
+            <i class="bi bi-check2-circle accent"></i>Best Quality
+        </div>
+    </div>
+    <div class="container p-1 align-items-center" style="position: relative;overflow: hidden;">
+        <form method="POST" id="download-form" class="d-flex justify-content-center">
+            {% csrf_token %}
+            <div class="input-group border rounded-pill p-1 width-75 bg-secondary-white align-items-center">
+                <div class="form-floating width-75">
+                    <input type="text" class="form-control bg-transparent rounded-pill border-0" name="youtube_url" placeholder="Youtube URL" id="youtube-url" required>
+                    <label for="youtube-url" class="black">Youtube URL</label>
+                </div>
+                <button type="submit" id="downloadBtn" class="btn white danger-bg rounded-pill p-3">Download</i></button>
+            </div>
+        </form>
+        <div class="container w-100 h-100 black-bg gap-2 loading" id="loading">
+            <div class="bar-loader"></div>
+            <span>LOADING...</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('download-form').addEventListener('submit', ()=>{
+        document.getElementById('loading').style.display = 'flex';
+    });
+</script>
+
+{% endblock content %}
