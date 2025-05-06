@@ -28,13 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['vidvibe.up.railway.app', '127.0.0.1', 'localhost']
 
-CSRF_TRUSTED_ORIGIN = [
-    "https://vidvibe.up.railway.app/",
-]
-
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -84,6 +77,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Vidvibe.wsgi.application'
+
+CSRF_TRUSTED_ORIGIN = [
+    'https://vidvibe.up.railway.app'
+]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Database
