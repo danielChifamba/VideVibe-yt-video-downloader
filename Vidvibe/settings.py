@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mht%=fa!!g8u#q1-b#i74uhv#v^q9tbb7gw%cpt%e=kpr5%=_(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://vidvibe.up.railway.app', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
 
 CSRF_TRUSTED_ORIGIN = [
     'https://vidvibe.up.railway.app'
