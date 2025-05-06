@@ -1,1 +1,1 @@
-web: gunicorn Videvibe.wsgi
+web: gunicorn Vidvibe.wsgi
