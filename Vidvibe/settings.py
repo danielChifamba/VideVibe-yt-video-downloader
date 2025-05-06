@@ -24,13 +24,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mht%=fa!!g8u#q1-b#i74uhv#v^q9tbb7gw%cpt%e=kpr5%=_('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['vidvibe.up.railway.app', '127.0.0.1', 'localhost']
 
 CSRF_TRUSTED_ORIGIN = [
     'vidvibe.up.railway.app'
 ]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
