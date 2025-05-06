@@ -1,1 +1,1 @@
-web: gunicorn Vidvibe.wsgi --log-file -
+web: gunicorn vidvibe.wsgi --log-file -
