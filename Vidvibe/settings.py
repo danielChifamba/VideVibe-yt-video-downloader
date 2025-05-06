@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['vidvibe.up.railway.app', '127.0.0.1', 'localhost']
 
 CSRF_TRUSTED_ORIGIN = [
-    "https://vidvibe.up.railway.app",
+    "http://vidvibe.up.railway.app",
 ]
 
 CSRF_COOKIE_SECURE = True
