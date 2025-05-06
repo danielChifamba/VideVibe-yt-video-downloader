@@ -28,6 +28,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGIN = [
+    "https://vidvibe.up.railway.app",
+]
 
 # Application definition
 
